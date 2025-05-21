@@ -18,7 +18,7 @@ Thanks for checking out this front-end coding challenge.
 
 ## Deploying my project
 
-- [Live Site URL](https://marwarabia.github.io/Perfume-preview-card/)
+- [Live Site URL](https://marwarabia.github.io/Four-card-feature-section/)
 
 
 **Have fun building!** 🚀
