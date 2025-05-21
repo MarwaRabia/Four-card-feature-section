@@ -1,0 +1,142 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* font-family: "Poppins", sans-serif; */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+  margin: 20px;
+  text-align: center;
+  background-color: var(--Very-Light-Gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+main h1:first-of-type {
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+  color: var(--Grayish-Blue);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+main h1:nth-of-type(2) {
+  font-family: "Poppins", sans-serif;
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+main > p {
+  font-family: "Poppins", sans-serif;
+  width: 545px;
+  color: var(--Grayish-Blue);
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 30px;
+}
+.cards div {
+  position: relative;
+  border-radius: 10px;
+  background-color: white;
+  height: 250px;
+  width: 350px;
+  color: var(--Very-Dark-Blue);
+  text-align: left;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.cards div p {
+  margin-top: 10px;
+  color: var(--Grayish-Blue);
+}
+.cards div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 0;
+  left: 0;
+}
+.cards .supervisor::before {
+  background-color: var(--Cyan);
+}
+.cards .team-builder::before {
+  background-color: var(--Red);
+}
+.cards .karma::before {
+  background-color: var(--Orange);
+}
+.cards .calculator::before {
+  background-color: var(--Blue);
+}
+
+.cards .supervisor {
+  grid-area: 2 / 1 / 4 / 2;
+}
+.cards .team-builder {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.cards .karma {
+  grid-area: 3/ 2/ 5/3;
+}
+
+.cards .calculator {
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+.cards img {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  main {
+    max-width: 400px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  main h1 {
+ 
+    font-size: 25px;
+    
+  }
+  main > p {
+    
+    width: 320px;
+ 
+  }
+}
